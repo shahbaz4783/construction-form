@@ -172,8 +172,8 @@ body {
 	text-align: center;
 	padding: 20px;
 	font-size: 24px;
-	font-weight: 500;
-	background: linear-gradient(to bottom, #ffffff, #f8f8f8);
+	background: #ff82ba;
+  color: white;
 	border-bottom: 1px solid #e0e0e0;
 }
 
@@ -209,7 +209,7 @@ body {
 	background-color: var(--label-bg-color);
 	display: flex;
 	align-items: flex-start;
-	font-weight: 500;
+	font-weight: 400;
 }
 
 .form-input {
@@ -233,7 +233,7 @@ body {
 	padding: 0 8px;
 	border-radius: 2px;
 	font-size: 12px;
-	font-weight: 500;
+	font-weight: 400;
 	margin-right: 8px;
 	color: white;
 }
@@ -410,6 +410,34 @@ input[type='radio']:checked + .radio-button::after {
 	}
 }
 
+.option-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.option-want {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  padding: 4px 8px;
+  border-bottom: 2px solid #ff82ba; 
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+
+
+/* Input Box Styling */
+.count-input {
+  width: 50px;
+  padding: 3px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+
 /* Print Styles */
 @media print {
 	.container {
@@ -422,6 +450,20 @@ input[type='radio']:checked + .radio-button::after {
 	}
 }
 
+.text-area-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  outline: none;
+}
+
+.text-area-input:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.2);
+}
 
 /* Additional styles for new form sections */
 
@@ -659,3 +701,6 @@ input[type='radio']:checked + .radio-button::after {
     padding: 10px;
   }
 }
+
+
+
