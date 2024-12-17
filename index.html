@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>お問い合わせフォーム</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<main class="container">
+			<header>
+				<h1 class="form-title">お問い合わせフォーム</h1>
+				<div class="progress-steps">
+					<div class="step active">
+						<div class="step-content">
+							<div class="step-number">01</div>
+							<div class="step-text">
+								<h2>ご希望内容をご入力</h2>
+								<p>必要事項をご記入ください</p>
+							</div>
+						</div>
+					</div>
+					<div class="step">
+						<div class="step-content">
+							<div class="step-number">02</div>
+							<div class="step-text">
+								<h2>入力確認をして最終送信</h2>
+								<p>内容をご確認ください</p>
+							</div>
+						</div>
+					</div>
+					<div class="step">
+						<div class="step-content">
+							<div class="step-number">03</div>
+							<div class="step-text">
+								<h2>弊社よりお客様へご連絡</h2>
+								<p>お客様ご希望のご連絡方法にて通常24時間以内にご連絡します</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<div class="form-notice">
+				<span class="required-label">必須</span>
+				印の項目は入力必須です。※半角カナは入力しないでください。
+			</div>
+
+			<form id="contactForm">
+				<!-- Section 1 (Customer information) -->
+				<section class="form-section">
+					<h3 class="section-title">お客様情報</h3>
+
+					<div class="form-row">
+						<div class="form-label">
+							<span class="required-label">必須</span>
+							メールアドレス
+						</div>
+						<div class="form-input">
+							<input
+								type="email"
+								id="email"
+								name="email"
+								placeholder="例）info3@heartcoat.jp"
+								required
+							/>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-label">
+							<span class="required-label">必須</span>
+							施工先住所1
+						</div>
+						<div class="form-input">
+							<div class="postal-code">
+								<label for="zip">〒</label>
+								<input
+									type="text"
+									id="zip"
+									name="zip"
+									placeholder="例）0000000"
+									class="zip-input"
+									required
+								/>
+								<span class="helper-text"
+									>※郵便番号入力で住所が表記されます</span
+								>
+							</div>
+							<div>
+								<input
+									type="text"
+									id="address"
+									name="address"
+									placeholder="都道府県・市町村・番地等"
+									class="address-input"
+									required
+								/>
+								<p class="helper-text">市区郡までご入力お願いします</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-label">
+							<span class="optional-label">任意</span>
+							施工先住所2
+						</div>
+						<div class="form-input">
+							<div>
+								<input
+									type="text"
+									id="address02"
+									name="address02"
+									placeholder="都道府県・市町村・番地等"
+									class="address-input"
+								/>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-label">
+							<span class="required-label">必須</span>
+							建物の種類
+						</div>
+						<div class="form-input">
+							<div>
+								<select id="building-type" name="building-type" required>
+									<option value="">選択してください</option>
+									<option value="マンション">マンション</option>
+									<option value="戸建て">戸建て</option>
+									<option value="その他">その他</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-label">
+							<span class="optional-label">任意</span>
+							マンション名/ハウスメーカー
+						</div>
+						<div class="form-input">
+							<div>
+								<input
+									type="text"
+									id="address02"
+									name="address02"
+									placeholder="都道府県・市町村・番地等"
+									class="address-input"
+								/>
+								<p class="helper-text">市区郡までご入力お願いします</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-label">
+							<span class="required-label">必須</span>
+							施工時の物件状態
+						</div>
+						<div class="form-input">
+							<div>
+								<select id="building-type" name="building-type" required>
+									<option value="">選択してください</option>
+									<option value="新築">新築</option>
+									<option value="入居済">入居済</option>
+									<option value="中古">中古</option>
+									<option value="リノベ済">リノベ済</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-label">
+							<span class="required-label">必須</span>
+							物件引渡し予定日
+						</div>
+						<div class="form-input">
+							<div>
+								<input
+									name="scheduledDate"
+									type="date"
+									id="scheduledDate"
+									class="inp"
+								/>
+								<p class="helper-text">
+									未定・ご入居済の場合は おおよその日で構いません
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-row">
+						<div class="form-label">
+							<span class="required-label">必須</span>
+							引越し予定日
+						</div>
+						<div class="form-input">
+							<div>
+								<input
+									name="plannedDate"
+									type="date"
+									id="plannedDate"
+									class="inp"
+								/>
+								<p class="helper-text">
+									ご記入いただくことで、現在ご提案を受けているものと比較しながらのご提案がしやすくなります。
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Section 2 (Your request) -->
+				<section class="form-section">
+					<h3 class="section-title">ご希望内容</h3>
+					<div class="form-row">
+						<div class="form-label">
+							<span class="required-label">必須</span>
+							防カビコーティング
+						</div>
+						<div class="form-input">
+							<input
+								type="email"
+								id="email"
+								name="email"
+								placeholder="例）info3@heartcoat.jp"
+								required
+							/>
+						</div>
+					</div>
+				</section>
+
+				<div class="form-actions">
+					<button type="submit" class="submit-button">確認画面へ進む</button>
+				</div>
+			</form>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
