@@ -421,3 +421,241 @@ input[type='radio']:checked + .radio-button::after {
 		display: none;
 	}
 }
+
+
+/* Additional styles for new form sections */
+
+/* File upload */
+.file-upload-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.file-upload-group input[type="file"] {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Measurements grid */
+.measurements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.measurement-item {
+  display: flex;
+  align-items: center;
+}
+
+.measurement-input {
+  width: 60px;
+  margin: 0 5px;
+}
+
+/* Preferences grid */
+.preferences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.preferences-grid label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Inline input for "その他" option */
+.other-option {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.inline-input {
+  width: 150px;
+  margin: 0 5px;
+}
+
+/* Section divider */
+.section-divider {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.divider-line {
+  font-size: 14px;
+  color: #888;
+  letter-spacing: 2px;
+}
+
+/* Submit button */
+.form-actions{
+  display: flex;
+  justify-content: center;
+}
+.submit-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .file-upload-group {
+    flex-direction: column;
+  }
+
+  .measurements-grid,
+  .preferences-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .inline-input {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/* Attachment Section */
+/* File upload styles */
+.file-upload-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.file-upload-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.file-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: var(--label-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.file-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.file-input:hover {
+  border-color: var(--primary-color);
+}
+
+.file-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(66, 149, 219, 0.1);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .file-upload-container {
+    gap: 10px;
+  }
+
+  .file-upload-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .file-label {
+    width: 25px;
+    height: 25px;
+    font-size: 13px;
+  }
+
+  .file-input {
+    width: 100%;
+  }
+}
+
+
+.preferences-container {
+  padding: 20px;
+}
+
+.preferences-notice {
+  margin: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.preferences-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  background-color: var(--background-color);
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.checkbox-item:hover {
+  background-color: var(--label-bg-color);
+  border-radius: 4px;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+  .preferences-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .preferences-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .preferences-container {
+    padding: 15px;
+  }
+  
+  .checkbox-item {
+    padding: 10px;
+  }
+}
