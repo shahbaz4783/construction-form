@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>受付完了</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: sans-serif;
+            background: linear-gradient(to bottom right, #f0fdf4, #f0f9ff);
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 90%;
+            animation: slideUp 0.7s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .title {
+            color: #16a34a;
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 0 0 2rem 0;
+        }
+
+        .confirmation {
+            border-top: 1px solid #f3f4f6;
+            border-bottom: 1px solid #f3f4f6;
+            padding: 1.5rem 0;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .confirmation-label {
+            color: #4b5563;
+            margin-bottom: 0.5rem;
+        }
+
+        .confirmation-number {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin: 0.5rem 0;
+        }
+
+        .message {
+            text-align: center;
+            color: #4b5563;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1 class="title">受付完了</h1>
+        
+        <div class="confirmation">
+            <p class="confirmation-label">受付番号</p>
+            <p class="confirmation-number">202412265071</p>
+            <p class="confirmation-label">を受け付けました</p>
+        </div>
+
+        <div class="message">
+            <p>この度はお見積もりをご依頼くださり誠にありがとうございます。</p>
+            <p>いただきました内容を基に担当者よりご連絡させていただきます。</p>
+        </div>
+    </div>
+</body>
+</html>
