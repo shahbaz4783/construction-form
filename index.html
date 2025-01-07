@@ -44,848 +44,281 @@
 					</div>
 				</div>
 			</header>
-			<div class="form-notice">
-				<span class="required-label">必須</span>
-				印の項目は入力必須です。※半角カナは入力しないでください。
-			</div>
 
 			<form id="contactForm">
-				<!-- Section 1 (Customer information) -->
+				<!-- Personal Info Section -->
 				<section class="form-section">
-					<h3 class="section-title">お客様情報</h3>
-
-					<div class="form-row">
-						<div class="form-label">
-							<span class="required-label">必須</span>
-							メールアドレス
-						</div>
-						<div class="form-input">
-							<input
-								type="email"
-								id="email"
-								name="email"
-								placeholder="例）info3@heartcoat.jp"
-								required
-							/>
-						</div>
+					<div class="header-section">
+						<p class="header-text-red">最大8社から無料で一括見積もり</p>
+						<h1 class="header-text-large">簡単60秒入力</h1>
 					</div>
 
-					<div class="form-row">
-						<div class="form-label">
-							<span class="required-label">必須</span>
-							施工先住所1
-						</div>
-						<div class="form-input">
-							<div class="postal-code">
-								<label for="zip">〒</label>
-								<input
-									type="text"
-									id="zip"
-									name="zip"
-									placeholder="例）0000000"
-									class="zip-input"
-									required
-								/>
-								<span class="helper-text"
-									>※郵便番号入力で住所が表記されます</span
-								>
+					<div class="form-content">
+						<h2 class="section-title">お客様情報</h2>
+
+						<form class="customer-form">
+							<!-- Name -->
+							<div class="form-group">
+								<div class="form-label">
+									<span class="required-badge">必須</span>
+									<label for="name">お名前</label>
+								</div>
+								<div class="form-input">
+									<input type="text" id="name" name="name" required />
+								</div>
 							</div>
-							<div>
-								<input
-									type="text"
-									id="address"
-									name="address"
-									placeholder="都道府県・市町村・番地等"
-									class="address-input"
-									required
-								/>
-								<p class="helper-text">市区郡までご入力お願いします</p>
+
+							<!-- Email -->
+							<div class="form-group">
+								<div class="form-label">
+									<span class="required-badge">必須</span>
+									<label for="email">メールアドレス</label>
+								</div>
+								<div class="form-input">
+									<input type="email" id="email" name="email" required />
+								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="form-row">
-						<div class="form-label">施工先住所2</div>
-						<div class="form-input">
-							<div>
-								<input
-									type="text"
-									id="address02"
-									name="address02"
-									placeholder="都道府県・市町村・番地等"
-									class="address-input"
-								/>
+							<!-- Phone -->
+							<div class="form-group">
+								<div class="form-label">
+									<span class="required-badge">必須</span>
+									<label for="phone">電話番号</label>
+								</div>
+								<div class="form-input">
+									<input type="tel" id="phone" name="phone" required />
+								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="form-row">
-						<div class="form-label">
-							<span class="required-label">必須</span>
-							建物の種類
-						</div>
-						<div class="form-input">
-							<div>
-								<select id="building-type" name="building-type" required>
-									<option value="">選択してください</option>
-									<option value="マンション">マンション</option>
-									<option value="戸建て">戸建て</option>
-									<option value="その他">その他</option>
-								</select>
+							<!-- Installation Address -->
+							<div class="form-group">
+								<div class="form-label">
+									<span class="required-badge">必須</span>
+									<label>施工先住所</label>
+								</div>
+								<div class="form-input">
+									<div class="address-fields">
+										<input type="text" placeholder="都道府県" required />
+										<input type="text" placeholder="市区町村" required />
+									</div>
+								</div>
 							</div>
-						</div>
-					</div>
 
-					<div class="form-row">
-						<div class="form-label">マンション名/ハウスメーカー</div>
-						<div class="form-input">
-							<div>
-								<input
-									type="text"
-									id="address02"
-									name="address02"
-									placeholder="都道府県・市町村・番地等"
-									class="address-input"
-								/>
-								<p class="helper-text">市区郡までご入力お願いします</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="form-row">
-						<div class="form-label">
-							<span class="required-label">必須</span>
-							施工時の物件状態
-						</div>
-						<div class="form-input">
-							<div>
-								<select id="building-type" name="building-type" required>
-									<option value="">選択してください</option>
-									<option value="新築">新築</option>
-									<option value="入居済">入居済</option>
-									<option value="中古">中古</option>
-									<option value="リノベ済">リノベ済</option>
-								</select>
-							</div>
-						</div>
-					</div>
-
-					<div class="form-row">
-						<div class="form-label">物件引渡し予定日</div>
-						<div class="form-input">
-							<div>
-								<input
-									name="scheduledDate"
-									type="date"
-									id="scheduledDate"
-									class="inp"
-								/>
-								<p class="helper-text">
-									未定・ご入居済の場合は おおよその日で構いません
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="form-row">
-						<div class="form-label">引越し予定日</div>
-						<div class="form-input">
-							<div>
-								<input
-									name="plannedDate"
-									type="date"
-									id="plannedDate"
-									class="inp"
-								/>
-								<p class="helper-text">
-									ご記入いただくことで、現在ご提案を受けているものと比較しながらのご提案がしやすくなります。
-								</p>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<!-- Section 2 (What you want) -->
-				<section class="form-section">
-					<h3 class="section-title">ご希望内容</h3>
-
-					<!-- Anti-mold Coating -->
-					<div class="form-row">
-						<div class="form-label">防カビコーティング</div>
-						<div class="form-input">
-							<div class="coating-option">
-								<input
-									type="checkbox"
-									id="mold-coating-desired"
-									name="mold-coating-desired"
-								/>
-								<label for="mold-coating-desired" class="option-want"
-									>希望する</label
-								>
-
-								<div class="sub-options">
-									<div class="option-group">
-										<label>
-											<input type="checkbox" name="浴室" />
-											浴室
+							<!-- Property Status -->
+							<div class="form-group">
+								<div class="form-label">
+									<span class="required-badge">必須</span>
+									<label>施工検討されている場所について</label>
+								</div>
+								<div class="form-input">
+									<div class="property-status">
+										<label class="checkbox-label">
+											<input
+												type="checkbox"
+												name="property-type"
+												value="新築"
+											/>
+											<span class="custom-checkbox"></span>
+											新築
 										</label>
-										<label>
-											<input type="checkbox" name="洗面所" />
-											洗面所
+										<label class="checkbox-label">
+											<input
+												type="checkbox"
+												name="property-type"
+												value="中古"
+											/>
+											<span class="custom-checkbox"></span>
+											中古
 										</label>
-										<label>
-											<input type="checkbox" name="キッチン" />
-											キッチン
+										<label class="checkbox-label">
+											<input
+												type="checkbox"
+												name="property-type"
+												value="リノベ"
+											/>
+											<span class="custom-checkbox"></span>
+											リノベ
 										</label>
-										<label>
-											<input type="checkbox" name="トイレ" />
-											トイレ
+									</div>
+									<div class="occupancy-status">
+										<label class="checkbox-label">
+											<input type="checkbox" name="occupancy" value="入居前" />
+											<span class="custom-checkbox"></span>
+											入居前
 										</label>
-										<label>
-											<input type="checkbox" name="下駄箱" />
-											下駄箱
-										</label>
-										<label>
-											<input type="checkbox" name="押し入れ/納戸" />
-											押し入れ/納戸
-										</label>
-										<label class="quantity-group">
-											<input type="checkbox" name="mold-other-storage" />
-											その他収納
-											<input type="number" class="count-input" min="0" /> 箇所
+										<label class="checkbox-label">
+											<input type="checkbox" name="occupancy" value="入居中" />
+											<span class="custom-checkbox"></span>
+											入居中
 										</label>
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
 
-					<!-- Water Area Coating -->
-					<div class="form-row">
-						<div class="form-label">水周りコーティング</div>
-						<div class="form-input">
-							<div class="coating-option">
-								<input
-									type="checkbox"
-									id="water-coating-desired"
-									name="water-coating-desired"
-									class="desire-checkbox"
-								/>
-								<label for="water-coating-desired" class="option-want"
-									>希望する</label
-								>
-
-								<div class="sub-options">
-									<div class="option-group">
-										<label
-											><input type="checkbox" name="water-bathroom" />
-											浴室</label
-										>
-										<label
-											><input type="checkbox" name="water-washbasin" />
-											洗面台</label
-										>
-										<label
-											><input type="checkbox" name="water-kitchen" />
-											キッチン</label
-										>
-										<label
-											><input type="checkbox" name="water-toilet" />
-											トイレ</label
-										>
+							<!-- Handover Date -->
+							<div class="form-group">
+								<div class="form-label">
+									<span class="required-badge">必須</span>
+									<label>物件引渡し予定日</label>
+								</div>
+								<div class="form-input">
+									<div class="date-input">
+										<input type="text" placeholder="年" required />
+										<span>/</span>
+										<input type="text" placeholder="月" required />
+										<span>/</span>
+										<input type="text" placeholder="日" required />
 									</div>
-									<div class="option-group">
-										<label
-											><input type="checkbox" name="water-sink" />
-											スロップシンク（ベランダ）</label
-										>
-									</div>
+									<p class="helper-text">
+										未定・ご入居済の場合は おおよその日で構いません
+									</p>
 								</div>
 							</div>
-						</div>
-					</div>
 
-					<!-- Cross Coating -->
-					<div class="form-row">
-						<div class="form-label">クロスコーティング</div>
-						<div class="form-input">
-							<div class="coating-option">
-								<input
-									type="checkbox"
-									id="cross-coating-desired"
-									name="cross-coating-desired"
-									class="desire-checkbox"
-								/>
-								<label for="cross-coating-desired" class="option-want"
-									>希望する</label
-								>
-
-								<div class="sub-options">
-									<div class="option-group">
-										<label>
-											<input type="checkbox" name="LDK" />
-											LDK
-										</label>
-										<label>
-											<input type="checkbox" name="廊下" />
-											廊下
-										</label>
-										<label class="quantity-group">
-											<input type="checkbox" name="cross-coating-storage" />
-											居室
-											<input type="number" class="count-input" min="0" />部屋
-										</label>
+							<!-- Moving Date -->
+							<div class="form-group">
+								<div class="form-label">
+									<label>お引越し予定日</label>
+								</div>
+								<div class="form-input">
+									<div class="date-input">
+										<input type="text" placeholder="年" />
+										<span>/</span>
+										<input type="text" placeholder="月" />
+										<span>/</span>
+										<input type="text" placeholder="日" />
 									</div>
+									<p class="helper-text">おおよその日で構いません</p>
 								</div>
 							</div>
-						</div>
-					</div>
 
-					<!-- Photocatalyst Coating -->
-					<div class="form-row">
-						<div class="form-label">光触媒/空気触媒/無光触媒コーティング</div>
-						<div class="form-input">
-							<div class="coating-option">
-								<input
-									type="checkbox"
-									id="catalyst-coating-desired"
-									name="catalyst-coating-desired"
-									class="desire-checkbox"
-								/>
-								<label for="catalyst-coating-desired" class="option-want"
-									>希望する</label
-								>
-
-								<div class="sub-options">
-									<div class="option-group">
-										<label>
-											<input type="checkbox" name="LDK" />
-											LDK
-										</label>
-										<label>
-											<input type="checkbox" name="廊下" />
-											廊下
-										</label>
-										<label class="quantity-group">
-											<input type="checkbox" name="cross-coating-storage" />
-											居室
-											<input type="number" class="count-input" min="0" />部屋
-										</label>
-										<label class="quantity-group">
-											<input type="checkbox" name="cross-coating-storage" />
-											ドア
-											<input type="number" class="count-input" min="0" />枚
-										</label>
-									</div>
+							<!-- Building Name -->
+							<div class="form-group">
+								<div class="form-label">
+									<label>マンション名/ハウスメーカー</label>
+								</div>
+								<div class="form-input">
+									<input type="text" />
 								</div>
 							</div>
-						</div>
-					</div>
 
-					<!-- Stone Material Coating -->
-					<div class="form-row">
-						<div class="form-label">石材コーティング</div>
-						<div class="form-input">
-							<div class="coating-option">
-								<input
-									type="checkbox"
-									id="stone-coating-desired"
-									name="stone-coating-desired"
-									class="desire-checkbox"
-								/>
-								<label for="stone-coating-desired" class="option-want"
-									>希望する</label
-								>
-
-								<div class="sub-options">
-									<div class="option-group">
-										<label>
-											<input type="checkbox" name="玄関" />
-											玄関
-										</label>
-										<label>
-											<input type="checkbox" name="洗面所" />
-											洗面所
-										</label>
-										<label>
-											<input type="checkbox" name="トイレ" />
-											トイレ
-										</label>
-
-										<label class="quantity-group">
-											<input type="checkbox" name="cross-coating-storage" />
-											廊下 約
-											<input type="number" class="count-input" min="0" />帖
-										</label>
-										<label>
-											<input type="checkbox" name="キッチン" />
-											キッチン
-										</label>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Cushion Floor Coating -->
-					<div class="form-row">
-						<div class="form-label">クッションフロアコーティング</div>
-						<div class="form-input">
-							<div class="coating-option">
-								<input
-									type="checkbox"
-									id="cushion-coating-desired"
-									name="cushion-coating-desired"
-									class="desire-checkbox"
-								/>
-								<label for="cushion-coating-desired" class="option-want"
-									>希望する</label
-								>
-
-								<div class="sub-options">
-									<div class="option-group">
-										<label
-											><input type="checkbox" name="cushion-washroom" />
-											洗面所</label
-										>
-										<label
-											><input type="checkbox" name="cushion-toilet" />
-											トイレ</label
-										>
-										<label
-											><input type="checkbox" name="cushion-kitchen" />
-											キッチン</label
-										>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Japanese Room White Wood Coating -->
-					<div class="form-row">
-						<div class="form-label">和室白木コーティング</div>
-						<div class="form-input">
-							<div class="coating-option">
-								<input
-									type="checkbox"
-									id="japanese-coating-desired"
-									name="japanese-coating-desired"
-									class="desire-checkbox"
-								/>
-								<label for="japanese-coating-desired" class="option-want"
-									>希望する</label
-								>
-
-								<div class="sub-options">
-									<div class="option-group">
-										<label class="quantity-group">
-											<input type="checkbox" name="cross-coating-storage" />
-											和室
-											<input type="number" class="count-input" min="0" />部屋
-										</label>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Window Coating -->
-					<div class="form-row">
-						<div class="form-label">窓枠コーティング</div>
-						<div class="form-input">
-							<div class="coating-option">
-								<input
-									type="checkbox"
-									id="window-coating-desired"
-									name="window-coating-desired"
-									class="desire-checkbox"
-								/>
-								<label for="window-coating-desired" class="option-want"
-									>希望する</label
-								>
-								<div class="sub-options">
-									<div class="option-group">
-										<label class="quantity-group">
-											<input type="checkbox" name="cross-coating-storage" />
-											掃き出し窓
-											<input type="number" class="count-input" min="0" />枚
-										</label>
-										<label class="quantity-group">
-											<input type="checkbox" name="cross-coating-storage" />
-											腰高窓
-											<input type="number" class="count-input" min="0" />枚
-										</label>
-										<label class="quantity-group">
-											<input type="checkbox" name="cross-coating-storage" />
-											その他小窓
-											<input type="number" class="count-input" min="0" />枚
-										</label>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Door and Storage Anti-stain Coating -->
-					<div class="form-row">
-						<div class="form-label">ドア・扉等防汚コーティング</div>
-						<div class="form-input">
-							<div class="coating-option">
-								<input
-									type="checkbox"
-									id="door-coating-desired"
-									name="door-coating-desired"
-									class="desire-checkbox"
-								/>
-								<label for="door-coating-desired" class="option-want"
-									>希望する</label
-								>
-
-								<div class="sub-options">
-									<div class="option-group">
-										<label class="quantity-group">
-											<input type="checkbox" name="cross-coating-storage" />
-											ドア
-											<input type="number" class="count-input" min="0" />枚
-										</label>
-										<label class="quantity-group">
-											<input type="checkbox" name="cross-coating-storage" />
-											収納扉
-											<input type="number" class="count-input" min="0" />枚
-										</label>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Floor Coating Confirmation -->
-					<div class="form-row">
-						<div class="form-label">
-							フロアコーティングをご希望の方はお答えください。
-						</div>
-						<div class="form-input">
-							<div class="radio-group">
-								<label class="radio-label">
-									<input
-										type="radio"
-										name="floor-coating-checked"
-										value="検討している"
-									/>
-									<span class="custom-radio"></span>
-									<span class="radio-text">検討している</span>
-								</label>
-								<label class="radio-label">
-									<input
-										type="radio"
-										name="floor-coating-checked"
-										value="検討していない"
-									/>
-									<span class="custom-radio"></span>
-									<span class="radio-text">検討していない</span>
-								</label>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<!-- Section 3 (Customer environment) -->
-				<section class="form-section customer-env">
-					<h3 class="section-title">お客様の環境</h3>
-					<p class="preferences-notice">
-						・ニーズに合わせたフロアコーティングのご提案を希望する場合は当てはまる項目にチェックをお願い致します。
-					</p>
-
-					<!-- Grid Layout -->
-					<div class="preferences-grid">
-						<!-- Living Situation -->
-						<div class="preference-group">
-							<h4 class="group-title">生活環境</h4>
-							<label class="checkbox-item">
-								<input type="checkbox" name="single" /> 単身
-							</label>
-							<label class="checkbox-item">
-								<input type="checkbox" name="2plus" /> お住まいは2名以上
-							</label>
-							<label class="checkbox-item">
-								<input type="checkbox" name="4plus" /> お住まいは4名以上
-							</label>
-						</div>
-
-						<!-- Family Situation -->
-						<div class="preference-group">
-							<h4 class="group-title">家族構成</h4>
-							<label class="checkbox-item">
-								<input type="checkbox" name="elderly" />
-								高齢の方、又は高齢者と同居
-							</label>
-							<label class="checkbox-item">
-								<input type="checkbox" name="children" /> お子様と一緒に暮らす
-							</label>
-						</div>
-
-						<!-- Pets -->
-						<div class="preference-group">
-							<h4 class="group-title">ペット</h4>
-							<label class="checkbox-item">
-								<input type="checkbox" name="dog" /> 犬と一緒に暮らす
-							</label>
-							<label class="checkbox-item">
-								<input type="checkbox" name="cat" /> 猫と一緒に暮らす
-							</label>
-							<label class="checkbox-item">
-								<input type="checkbox" name="other-pet" /> その他ペットと暮らす
-							</label>
-						</div>
-
-						<!-- Maintenance Preferences -->
-						<div class="preference-group">
-							<h4 class="group-title">お手入れと性能</h4>
-							<label class="checkbox-item">
-								<input type="checkbox" name="easy-maintenance" />
-								お手入れが楽なのがいい
-							</label>
-							<label class="checkbox-item">
-								<input type="checkbox" name="scratch-resistant" />
-								傷がつきにくいのがいい
-							</label>
-							<label class="checkbox-item">
-								<input type="checkbox" name="slip-resistant" />
-								滑りにくいのがいい
-							</label>
-						</div>
-
-						<!-- Cost Preferences -->
-						<div class="preference-group">
-							<h4 class="group-title">コスト</h4>
-							<label class="checkbox-item">
-								<input type="checkbox" name="affordable" /> 安価ならなんでもいい
-							</label>
-							<label class="checkbox-item">
-								<input type="checkbox" name="balanced" /> 値段と質のバランス
-							</label>
-							<label class="checkbox-item">
-								<input type="checkbox" name="quality" />
-								少し高価でも高性能がいい
-							</label>
-						</div>
-					</div>
-				</section>
-
-				<!-- Section 4 (Type of coating you want) -->
-				<section class="form-section">
-					<h3 class="section-title">ご希望のコーティングの種類</h3>
-
-					<!-- Coating Types -->
-					<div class="form-row">
-						<div class="form-label">チェックボックス</div>
-						<div class="form-input">
-							<div class="sub-options">
-								<div class="option-group">
-									<label>
-										<input type="checkbox" name="UVコーティング" />
-										UVコーティング
-									</label>
-									<label>
-										<input type="checkbox" name="ガラスコーティング" />
-										ガラスコーティング
-									</label>
-									<label>
-										<input type="checkbox" name="シリコンコーティング" />
-										シリコンコーティング
-									</label>
-									<label>
-										<input type="checkbox" name="ウレタンコーティング" />
-										ウレタンコーティング
-									</label>
-
-									<label class="quantity-group">
-										<input type="checkbox" name="mold-other-storage" />
-										その他
-										<input type="text" />
-										<p>*ご紹介を受けた製品名など</p>
-									</label>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="form-row">
-						<div class="form-label">面積の単位</div>
-						<div class="form-input">
-							<div class="radio-group">
-								<label class="radio-label">
-									<input type="radio" name="unit" value="帖" />
-									<span class="custom-radio"></span>
-									<span class="radio-text">帖</span>
-								</label>
-								<label class="radio-label">
-									<input type="radio" name="unit" value="平米" />
-									<span class="custom-radio"></span>
-									<span class="radio-text">平米</span>
-								</label>
-							</div>
-						</div>
-					</div>
-
-					<div class="form-row">
-						<div class="form-label">LDK</div>
-						<div class="form-input">
-							<input type="number" class="count-input" min="0" />
-						</div>
-					</div>
-
-					<div class="form-row">
-						<div class="form-label">玄関ホール</div>
-						<div class="form-input">
-							<input type="number" class="count-input" min="0" />
-						</div>
-					</div>
-
-					<div class="form-row">
-						<div class="form-label">廊下1</div>
-						<div class="form-input">
-							<input type="number" class="count-input" min="0" />
-						</div>
-					</div>
-
-					<div class="form-row">
-						<div class="form-label">洋室1</div>
-						<div class="form-input">
-							<input type="number" class="count-input" min="0" />
-						</div>
-					</div>
-
-					<div class="form-row">
-						<div class="form-label">洋室2</div>
-						<div class="form-input">
-							<input type="number" class="count-input" min="0" />
-						</div>
-					</div>
-
-					<div class="form-row">
-						<div class="form-label">洋室3</div>
-						<div class="form-input">
-							<input type="number" class="count-input" min="0" />
-						</div>
-					</div>
-
-					<div class="form-row">
-						<div class="form-label">洋室4</div>
-						<div class="form-input">
-							<input type="number" class="count-input" min="0" />
-						</div>
-					</div>
-
-					<div class="form-row">
-						<div class="form-label">洋室5</div>
-						<div class="form-input">
-							<input type="number" class="count-input" min="0" />
-						</div>
-					</div>
-
-					<div class="form-row">
-						<div class="form-label">廊下2</div>
-						<div class="form-input">
-							<input type="number" class="count-input" min="0" />
-						</div>
-					</div>
-
-					<div class="form-row">
-						<div class="form-label">廊下3</div>
-						<div class="form-input">
-							<input type="number" class="count-input" min="0" />
-						</div>
-					</div>
-
-					<div class="form-row">
-						<div class="form-label">大型収納</div>
-						<div class="form-input">
-							<input type="number" class="count-input" min="0" />
-						</div>
-					</div>
-
-					<div class="form-row">
-						<div class="form-label">その他</div>
-						<div class="form-input">
-							<input type="number" class="count-input" min="0" />
-						</div>
-					</div>
-
-					<div class="form-row">
-						<div class="form-label">階段</div>
-						<div class="form-input">
-							<input type="number" class="count-input" min="0" />
-						</div>
-					</div>
-				</section>
-
-				<!-- Attachments 5 Attachment Section -->
-				<section class="form-section">
-					<h3 class="section-title">お問い合わせ・ご相談内容はこちら</h3>
-
-					<div class="form-row">
-						<div class="form-label">ご相談内容</div>
-						<div class="form-input">
-							<textarea
-								name="inquiry-details"
-								id="inquiry-details"
-								rows="6"
-								placeholder="ご相談内容や詳細をご記入ください"
-								class="text-area-input"
-							></textarea>
-						</div>
-					</div>
-
-					<!-- File Upload Section -->
-					<div class="form-row">
-						<div class="form-label">添付資料など</div>
-						<div class="form-input">
-							<p>
-								既存の見積書や間取り図など共有が必要なものがあれば添付をお願いします
+							<p class="note-text">
+								現在ご提案を受けているものと比較しながらの提案を受けやすくなります
 							</p>
-							<p>
-								お問い合わせ確認メールに添付してご返信いただいても構いません
-							</p>
-
-							<div class="file-upload-container">
-								<div class="file-upload-item">
-									<input
-										type="file"
-										id="file1"
-										name="file1"
-										class="file-input"
-									/>
-								</div>
-								<div class="file-upload-item">
-									<input
-										type="file"
-										id="file2"
-										name="file2"
-										class="file-input"
-									/>
-								</div>
-								<div class="file-upload-item">
-									<input
-										type="file"
-										id="file3"
-										name="file3"
-										class="file-input"
-									/>
-								</div>
-							</div>
-							<p>対応ファイル形式：.jpg .png .gif .pdf</p>
-						</div>
+						</form>
 					</div>
 				</section>
+
+				<!-- Coating Options Section -->
+				<section class="form-section coating-section">
+            <h2 class="section-title">ご希望のハウスコーティング</h2>
+
+            <!-- Water Area Coating -->
+            <div class="coating-group auto-check">
+                <input type="checkbox" id="water-coating" class="main-checkbox" />
+                <label for="water-coating" class="main-label">
+                    水回りコーティング
+                    <span class="toggle-icon"></span>
+                </label>
+                <div class="sub-options">
+                    <label class="sub-item">
+                        <input type="checkbox" class="sub-checkbox" id="water-bathroom" />
+                        <span class="checkmark"></span>
+                        浴室
+                    </label>
+                    <label class="sub-item">
+                        <input type="checkbox" class="sub-checkbox" id="water-washbasin" />
+                        <span class="checkmark"></span>
+                        洗面台
+                    </label>
+                    <label class="sub-item">
+                        <input type="checkbox" class="sub-checkbox" id="water-kitchen" />
+                        <span class="checkmark"></span>
+                        キッチン
+                    </label>
+                    <label class="sub-item">
+                        <input type="checkbox" class="sub-checkbox" id="water-toilet" />
+                        <span class="checkmark"></span>
+                        トイレ
+                    </label>
+                </div>
+            </div>
+
+            <!-- Anti-mold Coating -->
+            <div class="coating-group auto-check">
+                <input type="checkbox" id="mold-coating" class="main-checkbox" />
+                <label for="mold-coating" class="main-label">
+                    防カビコーティング
+                    <span class="toggle-icon"></span>
+                </label>
+                <div class="sub-options">
+                    <label class="sub-item">
+                        <input type="checkbox" class="sub-checkbox" id="mold-bathroom" />
+                        <span class="checkmark"></span>
+                        浴室
+                    </label>
+                    <label class="sub-item">
+                        <input type="checkbox" class="sub-checkbox" id="mold-washroom" />
+                        <span class="checkmark"></span>
+                        洗面所
+                    </label>
+                    <label class="sub-item">
+                        <input type="checkbox" class="sub-checkbox" id="mold-kitchen" />
+                        <span class="checkmark"></span>
+                        キッチン
+                    </label>
+                    <label class="sub-item">
+                        <input type="checkbox" class="sub-checkbox" id="mold-toilet" />
+                        <span class="checkmark"></span>
+                        トイレ
+                    </label>
+                    <label class="sub-item">
+                        <input type="checkbox" class="sub-checkbox" id="mold-storage" />
+                        <span class="checkmark"></span>
+                        収納内
+                    </label>
+                </div>
+            </div>
+
+            <!-- Cross Coating -->
+            <div class="coating-group">
+                <input type="checkbox" id="cross-coating" class="main-checkbox" />
+                <label for="cross-coating" class="main-label">
+                    クロス(防汚/触媒系)コーティング
+                    <span class="toggle-icon"></span>
+                </label>
+                <div class="sub-options">
+                    <label class="sub-item">
+                        <input type="checkbox" class="sub-checkbox" id="cross-bathroom" />
+                        <span class="checkmark"></span>
+                        浴室
+                    </label>
+                    <label class="sub-item">
+                        <input type="checkbox" class="sub-checkbox" id="cross-washroom" />
+                        <span class="checkmark"></span>
+                        洗面所
+                    </label>
+                    <label class="sub-item">
+                        <input type="checkbox" class="sub-checkbox" id="cross-kitchen" />
+                        <span class="checkmark"></span>
+                        キッチン
+                    </label>
+                    <label class="sub-item">
+                        <input type="checkbox" class="sub-checkbox" id="cross-toilet" />
+                        <span class="checkmark"></span>
+                        トイレ
+                    </label>
+                    <label class="sub-item">
+                        <input type="checkbox" class="sub-checkbox" id="cross-storage" />
+                        <span class="checkmark"></span>
+                        収納内
+                    </label>
+                </div>
+            </div>
+        </section>
 
 				<!-- Submit -->
-				<div class="form-actions">
-					<button type="submit" class="submit-button">確認画面へ進む</button>
-				</div>
 			</form>
 		</main>
-		<script src="script.js"></script>
 	</body>
 </html>
