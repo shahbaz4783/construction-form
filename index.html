@@ -226,7 +226,6 @@
 									type="checkbox"
 									class="sub-checkbox"
 									id="water-bathroom"
-									checked
 								/>
 								浴室
 							</label>
@@ -235,7 +234,6 @@
 									type="checkbox"
 									class="sub-checkbox"
 									id="water-washbasin"
-									checked
 								/>
 								<span class="checkmark"></span>
 								洗面台
@@ -245,13 +243,12 @@
 									type="checkbox"
 									class="sub-checkbox"
 									id="water-kitchen"
-									checked
 								/>
 								<span class="checkmark"></span>
 								キッチン
 							</label>
 							<label class="sub-item">
-								<input type="checkbox" class="sub-checkbox" id="water-toilet" checked/>
+								<input type="checkbox" class="sub-checkbox" id="water-toilet" />
 								<span class="checkmark"></span>
 								トイレ
 							</label>
@@ -260,7 +257,7 @@
 
 					<!-- Anti-mold Coating -->
 					<div class="coating-group">
-						<input type="checkbox" id="mold-coating" class="main-checkbox" checked/>
+						<input type="checkbox" id="mold-coating" class="main-checkbox" />
 						<label for="mold-coating" class="main-label">
 							防カビコーティング
 							<span class="toggle-icon"></span>
@@ -271,7 +268,6 @@
 									type="checkbox"
 									class="sub-checkbox"
 									id="mold-bathroom"
-									checked
 								/>
 								<span class="checkmark"></span>
 								浴室
@@ -281,23 +277,22 @@
 									type="checkbox"
 									class="sub-checkbox"
 									id="mold-washroom"
-									checked
 								/>
 								<span class="checkmark"></span>
 								洗面所
 							</label>
 							<label class="sub-item">
-								<input type="checkbox" class="sub-checkbox" id="mold-kitchen" checked />
+								<input type="checkbox" class="sub-checkbox" id="mold-kitchen" />
 								<span class="checkmark"></span>
 								キッチン
 							</label>
 							<label class="sub-item">
-								<input type="checkbox" class="sub-checkbox" id="mold-toilet" checked/>
+								<input type="checkbox" class="sub-checkbox" id="mold-toilet" />
 								<span class="checkmark"></span>
 								トイレ
 							</label>
 							<label class="sub-item">
-								<input type="checkbox" class="sub-checkbox" id="mold-storage" checked/>
+								<input type="checkbox" class="sub-checkbox" id="mold-storage" />
 								<span class="checkmark"></span>
 								収納内
 							</label>
@@ -306,7 +301,7 @@
 
 					<!-- Cross Coating -->
 					<div class="coating-group">
-						<input type="checkbox" id="cross-coating" class="main-checkbox" checked />
+						<input type="checkbox" id="cross-coating" class="main-checkbox" />
 						<label for="cross-coating" class="main-label">
 							クロス(防汚/触媒系)コーティング
 							<span class="toggle-icon"></span>
@@ -317,7 +312,6 @@
 									type="checkbox"
 									class="sub-checkbox"
 									id="cross-bathroom"
-									checked
 								/>
 								<span class="checkmark"></span>
 								浴室
@@ -327,7 +321,6 @@
 									type="checkbox"
 									class="sub-checkbox"
 									id="cross-washroom"
-									checked
 								/>
 								<span class="checkmark"></span>
 								洗面所
@@ -337,13 +330,12 @@
 									type="checkbox"
 									class="sub-checkbox"
 									id="cross-kitchen"
-									checked
 								/>
 								<span class="checkmark"></span>
 								キッチン
 							</label>
 							<label class="sub-item">
-								<input type="checkbox" class="sub-checkbox" id="cross-toilet" checked/>
+								<input type="checkbox" class="sub-checkbox" id="cross-toilet" />
 								<span class="checkmark"></span>
 								トイレ
 							</label>
@@ -352,7 +344,6 @@
 									type="checkbox"
 									class="sub-checkbox"
 									id="cross-storage"
-									checked
 								/>
 								<span class="checkmark"></span>
 								収納内
@@ -420,7 +411,7 @@
 								<label class="radio-label">
 									<input
 										type="radio"
-										name="floor-coating-checked"
+										name="floor-coating-"
 										value="検討している"
 										id="considering"
 									/>
@@ -430,7 +421,7 @@
 								<label class="radio-label">
 									<input
 										type="radio"
-										name="floor-coating-checked"
+										name="floor-coating-"
 										value="検討していない"
 										id="not-considering"
 									/>
@@ -623,39 +614,49 @@
 						</div>
 
 						<div class="form-group">
-    <label for="area-unit" class="form-label">施工面積の単位</label>
-    <div class="form-input area-unit-group">
-        <label class="radio-label area-unit-label">
-            <input type="radio" name="area-unit" value="tatami" class="area-unit-radio" />
-            <span class="custom-radio"></span>
-            <span class="radio-text">帖</span>
-        </label>
-        <label class="radio-label area-unit-label">
-            <input type="radio" name="area-unit" value="square-meter" class="area-unit-radio" />
-            <span class="custom-radio"></span>
-            <span class="radio-text">平米（㎡）</span>
-        </label>
-    </div>
-</div>
+							<label for="area-unit" class="form-label">施工面積の単位</label>
+							<div class="form-input area-unit-group">
+								<label class="radio-label area-unit-label">
+									<input
+										type="radio"
+										name="area-unit"
+										value="tatami"
+										class="area-unit-radio"
+									/>
+									<span class="custom-radio"></span>
+									<span class="radio-text">帖</span>
+								</label>
+								<label class="radio-label area-unit-label">
+									<input
+										type="radio"
+										name="area-unit"
+										value="square-meter"
+										class="area-unit-radio"
+									/>
+									<span class="custom-radio"></span>
+									<span class="radio-text">平米（㎡）</span>
+								</label>
+							</div>
+						</div>
 
 						<div class="form-group">
-    <label for="construction-area" class="form-label">施工面積</label>
-    <div class="form-input">
-        <div class="construction-area-wrapper">
-            <span class="area-prefix">約</span>
-            <div class="area-input-container">
-                <input
-                    type="text"
-                    id="construction-area"
-                    name="construction-area"
-                    class="area-input"
-                    placeholder="数値を入力"
-                />
-            </div>
-            <span class="area-suffix">帖/平米</span>
-        </div>
-    </div>
-</div>
+							<label for="construction-area" class="form-label">施工面積</label>
+							<div class="form-input">
+								<div class="construction-area-wrapper">
+									<span class="area-prefix">約</span>
+									<div class="area-input-container">
+										<input
+											type="text"
+											id="construction-area"
+											name="construction-area"
+											class="area-input"
+											placeholder="数値を入力"
+										/>
+									</div>
+									<span class="area-suffix">帖/平米</span>
+								</div>
+							</div>
+						</div>
 					</div>
 				</section>
 
@@ -741,7 +742,11 @@
 				<!-- Submit -->
 				<section class="form-section submit-section">
 					<div class="submit-container">
-						<button type="submit" class="submit-button" onclick="window.location.href='confirmation.html'">
+						<button
+							type="submit"
+							class="submit-button"
+							onclick="window.location.href='confirmation.html'"
+						>
 							<span class="submit-text">確認画面へ進む</span>
 							<span class="submit-icon">→</span>
 						</button>
@@ -781,6 +786,25 @@
 						fileNameElement.textContent = fileName;
 					});
 				});
+			});
+
+			// Default Check all if parent is clicked
+			document.addEventListener('DOMContentLoaded', function () {
+				function handleMainCheckbox(mainCheckboxId) {
+					const mainCheckbox = document.getElementById(mainCheckboxId);
+					const coatingGroup = mainCheckbox.closest('.coating-group');
+					const subCheckboxes = coatingGroup.querySelectorAll('.sub-checkbox');
+
+					mainCheckbox.addEventListener('change', function () {
+						subCheckboxes.forEach((checkbox) => {
+							checkbox.checked = this.checked;
+						});
+					});
+				}
+
+				handleMainCheckbox('water-coating');
+				handleMainCheckbox('mold-coating');
+				handleMainCheckbox('cross-coating');
 			});
 		</script>
 	</body>
