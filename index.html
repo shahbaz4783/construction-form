@@ -56,7 +56,7 @@
 					<div class="form-content">
 						<h2 class="section-title">お客様情報</h2>
 
-						<form class="customer-form">
+
 							<!-- Name -->
 							<div class="form-group">
 								<div class="form-label">
@@ -64,7 +64,7 @@
 									<label for="name">お名前</label>
 								</div>
 								<div class="form-input">
-									<input type="text" id="name" name="name" required />
+									<input type="text" id="name" name="name" placeholder="名前を入力してください" required />
 								</div>
 							</div>
 
@@ -75,7 +75,7 @@
 									<label for="email">メールアドレス</label>
 								</div>
 								<div class="form-input">
-									<input type="email" id="email" name="email" required />
+									<input type="email" id="email" name="email" placeholder="メールアドレスを入力してください" required />
 								</div>
 							</div>
 
@@ -86,7 +86,7 @@
 									<label for="phone">電話番号</label>
 								</div>
 								<div class="form-input">
-									<input type="tel" id="phone" name="phone" required />
+									<input type="tel" id="phone" name="phone" placeholder="電話番号を入力してください" required />
 								</div>
 							</div>
 
@@ -117,8 +117,9 @@
 												type="checkbox"
 												name="property-type"
 												value="新築"
+												class="sub-checkbox"
 											/>
-											<span class="custom-checkbox"></span>
+											<span class="checkmark"></span>
 											新築
 										</label>
 										<label class="checkbox-label">
@@ -126,8 +127,9 @@
 												type="checkbox"
 												name="property-type"
 												value="中古"
+												class="sub-checkbox"
 											/>
-											<span class="custom-checkbox"></span>
+											<span class="checkmark"></span>
 											中古
 										</label>
 										<label class="checkbox-label">
@@ -135,20 +137,21 @@
 												type="checkbox"
 												name="property-type"
 												value="リノベ"
+												class="sub-checkbox"
 											/>
-											<span class="custom-checkbox"></span>
+											<span class="checkmark"></span>
 											リノベ
 										</label>
 									</div>
 									<div class="occupancy-status">
 										<label class="checkbox-label">
-											<input type="checkbox" name="occupancy" value="入居前" />
-											<span class="custom-checkbox"></span>
+											<input type="checkbox" name="occupancy" value="入居前" class="sub-checkbox" />
+											<span class="checkmark"></span>
 											入居前
 										</label>
 										<label class="checkbox-label">
-											<input type="checkbox" name="occupancy" value="入居中" />
-											<span class="custom-checkbox"></span>
+											<input type="checkbox" name="occupancy" value="入居中" class="sub-checkbox" />
+											<span class="checkmark"></span>
 											入居中
 										</label>
 									</div>
@@ -205,7 +208,6 @@
 							<p class="note-text">
 								現在ご提案を受けているものと比較しながらの提案を受けやすくなります
 							</p>
-						</form>
 					</div>
 				</section>
 

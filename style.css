@@ -149,7 +149,9 @@ body {
 		left: 24px;
 		width: 2px;
 		height: 100%;
+		background: none;
 	}
+
 
 	.step-content {
 		flex-direction: row;
@@ -683,10 +685,6 @@ input[type='tel']:focus {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
 .form-label {
     display: block;
     font-weight: 600;
@@ -1120,15 +1118,6 @@ input[type='tel']:focus {
     }
 }
 
-/* Base form section styles */
-.form-section {
-    max-width: 800px;
-    margin: 2rem auto;
-    background: white;
-    border-radius: 8px;
-    border: 2px solid #22c55e;
-    padding: 2rem;
-}
 
 .coating-section {
     background-color: #f9fafb;
@@ -1141,13 +1130,6 @@ input[type='tel']:focus {
     border-bottom: 2px solid #eee;
 }
 
-/* Form group styles */
-.form-group {
-    display: flex;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #eee;
-}
 
 .form-label {
     width: 200px;
