@@ -9,6 +9,7 @@
 			href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&display=swap"
 			rel="stylesheet"
 		/>
+		<script src="script.js" defer></script>
 	</head>
 	<body>
 		<main class="container">
@@ -45,7 +46,7 @@
 				</div>
 			</header>
 
-			<form id="contactForm">
+			<form id="contactForm" novalidate action="/confirmation.html">
 				<!-- Personal Info Section -->
 				<section class="form-section">
 					<div class="header-section">
@@ -229,6 +230,7 @@
 									class="sub-checkbox"
 									id="water-bathroom"
 								/>
+								<span class="checkmark"></span>
 								浴室
 							</label>
 							<label class="sub-item">
@@ -441,6 +443,7 @@
 								type="checkbox"
 								id="maintenance-preference"
 								class="main-checkbox"
+
 							/>
 							<label for="maintenance-preference" class="main-label">
 								お手入れと性能
@@ -747,7 +750,6 @@
 						<button
 							type="submit"
 							class="submit-button"
-							onclick="window.location.href='confirmation.html'"
 						>
 							<span class="submit-text">確認画面へ進む</span>
 							<span class="submit-icon">→</span>
@@ -756,58 +758,5 @@
 				</section>
 			</form>
 		</main>
-
-		<script>
-			// Radio Toggle
-			document.addEventListener('DOMContentLoaded', function () {
-				const consideringRadio = document.getElementById('considering');
-				const notConsideringRadio = document.getElementById('not-considering');
-				const coatingOptions = document.getElementById('coating-options');
-
-				function toggleCoatingOptions() {
-					if (consideringRadio.checked) {
-						coatingOptions.classList.add('visible');
-					} else {
-						coatingOptions.classList.remove('visible');
-					}
-				}
-
-				consideringRadio.addEventListener('change', toggleCoatingOptions);
-				notConsideringRadio.addEventListener('change', toggleCoatingOptions);
-			});
-
-			// File Upload preview
-			document.addEventListener('DOMContentLoaded', function () {
-				const fileInputs = document.querySelectorAll('.file-input');
-
-				fileInputs.forEach((input) => {
-					input.addEventListener('change', function (e) {
-						const fileName =
-							e.target.files[0]?.name || 'ファイルが選択されていません';
-						const fileNameElement = this.nextElementSibling.nextElementSibling;
-						fileNameElement.textContent = fileName;
-					});
-				});
-			});
-
-			// Default Check all if parent is clicked
-			document.addEventListener('DOMContentLoaded', function () {
-				function handleMainCheckbox(mainCheckboxId) {
-					const mainCheckbox = document.getElementById(mainCheckboxId);
-					const coatingGroup = mainCheckbox.closest('.coating-group');
-					const subCheckboxes = coatingGroup.querySelectorAll('.sub-checkbox');
-
-					mainCheckbox.addEventListener('change', function () {
-						subCheckboxes.forEach((checkbox) => {
-							checkbox.checked = this.checked;
-						});
-					});
-				}
-
-				handleMainCheckbox('water-coating');
-				handleMainCheckbox('mold-coating');
-				handleMainCheckbox('cross-coating');
-			});
-		</script>
 	</body>
 </html>
