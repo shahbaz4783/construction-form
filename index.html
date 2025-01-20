@@ -57,158 +57,188 @@
 					<div class="form-content">
 						<h2 class="section-title">お客様情報</h2>
 
+						<!-- Name -->
+						<div class="form-group">
+							<div class="form-label">
+								<span class="required-badge">必須</span>
+								<label for="name">お名前</label>
+							</div>
+							<div class="form-input">
+								<input
+									type="text"
+									id="name"
+									name="name"
+									placeholder="名前を入力してください"
+									required
+								/>
+							</div>
+						</div>
 
-							<!-- Name -->
-							<div class="form-group">
-								<div class="form-label">
-									<span class="required-badge">必須</span>
-									<label for="name">お名前</label>
-								</div>
-								<div class="form-input">
-									<input type="text" id="name" name="name" placeholder="名前を入力してください" required />
+						<!-- Email -->
+						<div class="form-group">
+							<div class="form-label">
+								<span class="required-badge">必須</span>
+								<label for="email">メールアドレス</label>
+							</div>
+							<div class="form-input">
+								<input
+									type="email"
+									id="email"
+									name="email"
+									placeholder="メールアドレスを入力してください"
+									required
+								/>
+							</div>
+						</div>
+
+						<!-- Phone -->
+						<div class="form-group">
+							<div class="form-label">
+								<span class="required-badge">必須</span>
+								<label for="phone">電話番号</label>
+							</div>
+							<div class="form-input">
+								<input
+									type="tel"
+									id="phone"
+									name="phone"
+									placeholder="電話番号を入力してください"
+									required
+								/>
+							</div>
+						</div>
+
+						<!-- Installation Address -->
+						<div class="form-group">
+							<div class="form-label">
+								<span class="required-badge">必須</span>
+								<label>施工先住所</label>
+							</div>
+							<div class="form-input">
+								<div class="address-fields">
+									<input type="text" placeholder="都道府県" required />
+									<input type="text" placeholder="市区町村" required />
 								</div>
 							</div>
+						</div>
 
-							<!-- Email -->
-							<div class="form-group">
-								<div class="form-label">
-									<span class="required-badge">必須</span>
-									<label for="email">メールアドレス</label>
-								</div>
-								<div class="form-input">
-									<input type="email" id="email" name="email" placeholder="メールアドレスを入力してください" required />
-								</div>
+						<!-- Property Status -->
+						<div class="form-group">
+							<div class="form-label">
+								<span class="required-badge">必須</span>
+								<label>施工検討されている場所について</label>
 							</div>
-
-							<!-- Phone -->
-							<div class="form-group">
-								<div class="form-label">
-									<span class="required-badge">必須</span>
-									<label for="phone">電話番号</label>
+							<div class="form-input">
+								<div class="property-status radio-group">
+									<label class="radio-label propety-status-label">
+										<input
+											type="radio"
+											name="property-type"
+											value="新築"
+											class="area-unit-radio"
+										/>
+										<span class="custom-radio"></span>
+										<span class="radio-text">新築</span>
+									</label>
+									<label class="radio-label propety-status-label">
+										<input
+											type="radio"
+											name="property-type"
+											value="中古"
+											class="area-unit-radio"
+										/>
+										<span class="custom-radio"></span>
+										<span class="radio-text">中古</span>
+									</label>
+									<label class="radio-label propety-status-label">
+										<input
+											type="radio"
+											name="property-type"
+											value="リノベ"
+											class="area-unit-radio"
+										/>
+										<span class="custom-radio"></span>
+										<span class="radio-text">リノベ</span>
+									</label>
 								</div>
-								<div class="form-input">
-									<input type="tel" id="phone" name="phone" placeholder="電話番号を入力してください" required />
-								</div>
-							</div>
-
-							<!-- Installation Address -->
-							<div class="form-group">
-								<div class="form-label">
-									<span class="required-badge">必須</span>
-									<label>施工先住所</label>
-								</div>
-								<div class="form-input">
-									<div class="address-fields">
-										<input type="text" placeholder="都道府県" required />
-										<input type="text" placeholder="市区町村" required />
-									</div>
-								</div>
-							</div>
-
-							<!-- Property Status -->
-							<div class="form-group">
-								<div class="form-label">
-									<span class="required-badge">必須</span>
-									<label>施工検討されている場所について</label>
-								</div>
-								<div class="form-input">
-									<div class="property-status">
-										<label class="checkbox-label">
+<hr>
+								<div class="occupancy-status">
+									<div class="occupancy-status radio-group">
+										<label class="radio-label">
 											<input
-												type="checkbox"
-												name="property-type"
-												value="新築"
-												class="sub-checkbox"
+												type="radio"
+												name="occupancy"
+												value="入居前"
+												class="area-unit-radio"
 											/>
-											<span class="checkmark"></span>
-											新築
+											<span class="custom-radio"></span>
+											<span class="radio-text">入居前</span>
 										</label>
-										<label class="checkbox-label">
+										<label class="radio-label">
 											<input
-												type="checkbox"
-												name="property-type"
-												value="中古"
-												class="sub-checkbox"
+												type="radio"
+												name="occupancy"
+												value="入居中"
+												class="area-unit-radio"
 											/>
-											<span class="checkmark"></span>
-											中古
-										</label>
-										<label class="checkbox-label">
-											<input
-												type="checkbox"
-												name="property-type"
-												value="リノベ"
-												class="sub-checkbox"
-											/>
-											<span class="checkmark"></span>
-											リノベ
-										</label>
-									</div>
-									<div class="occupancy-status">
-										<label class="checkbox-label">
-											<input type="checkbox" name="occupancy" value="入居前" class="sub-checkbox" />
-											<span class="checkmark"></span>
-											入居前
-										</label>
-										<label class="checkbox-label">
-											<input type="checkbox" name="occupancy" value="入居中" class="sub-checkbox" />
-											<span class="checkmark"></span>
-											入居中
+											<span class="custom-radio"></span>
+											<span class="radio-text">入居中</span>
 										</label>
 									</div>
 								</div>
 							</div>
+						</div>
 
-							<!-- Handover Date -->
-							<div class="form-group">
-								<div class="form-label">
-									<span class="required-badge">必須</span>
-									<label>物件引渡し予定日</label>
-								</div>
-								<div class="form-input">
-									<div class="date-input">
-										<input type="text" placeholder="年" required />
-										<span>/</span>
-										<input type="text" placeholder="月" required />
-										<span>/</span>
-										<input type="text" placeholder="日" required />
-									</div>
-									<p class="helper-text">
-										未定・ご入居済の場合は おおよその日で構いません
-									</p>
-								</div>
+						<!-- Handover Date -->
+						<div class="form-group">
+							<div class="form-label">
+								<span class="required-badge">必須</span>
+								<label>物件引渡し予定日</label>
 							</div>
-
-							<!-- Moving Date -->
-							<div class="form-group">
-								<div class="form-label">
-									<label>お引越し予定日</label>
+							<div class="form-input">
+								<div class="date-input">
+									<input type="text" placeholder="年" required />
+									<span>/</span>
+									<input type="text" placeholder="月" required />
+									<span>/</span>
+									<input type="text" placeholder="日" required />
 								</div>
-								<div class="form-input">
-									<div class="date-input">
-										<input type="text" placeholder="年" />
-										<span>/</span>
-										<input type="text" placeholder="月" />
-										<span>/</span>
-										<input type="text" placeholder="日" />
-									</div>
-									<p class="helper-text">おおよその日で構いません</p>
-								</div>
+								<p class="helper-text">
+									未定・ご入居済の場合は おおよその日で構いません
+								</p>
 							</div>
+						</div>
 
-							<!-- Building Name -->
-							<div class="form-group">
-								<div class="form-label">
-									<label>マンション名/ハウスメーカー</label>
-								</div>
-								<div class="form-input">
-									<input type="text" />
-								</div>
+						<!-- Moving Date -->
+						<div class="form-group">
+							<div class="form-label">
+								<label>お引越し予定日</label>
 							</div>
+							<div class="form-input">
+								<div class="date-input">
+									<input type="text" placeholder="年" />
+									<span>/</span>
+									<input type="text" placeholder="月" />
+									<span>/</span>
+									<input type="text" placeholder="日" />
+								</div>
+								<p class="helper-text">おおよその日で構いません</p>
+							</div>
+						</div>
 
-							<p class="note-text">
-								現在ご提案を受けているものと比較しながらの提案を受けやすくなります
-							</p>
+						<!-- Building Name -->
+						<div class="form-group">
+							<div class="form-label">
+								<label>マンション名/ハウスメーカー</label>
+							</div>
+							<div class="form-input">
+								<input type="text" />
+							</div>
+						</div>
+
+						<p class="note-text">
+							現在ご提案を受けているものと比較しながらの提案を受けやすくなります
+						</p>
 					</div>
 				</section>
 
@@ -221,8 +251,10 @@
 						<input type="checkbox" id="water-coating" class="main-checkbox" />
 						<label for="water-coating" class="main-label">
 							水回りコーティング
-							<span class="toggle-icon"></span>
+							<span class="checkmark"></span>
 						</label>
+
+
 						<div class="sub-options">
 							<label class="sub-item">
 								<input
@@ -264,7 +296,7 @@
 						<input type="checkbox" id="mold-coating" class="main-checkbox" />
 						<label for="mold-coating" class="main-label">
 							防カビコーティング
-							<span class="toggle-icon"></span>
+							<span class="checkmark"></span>
 						</label>
 						<div class="sub-options">
 							<label class="sub-item">
@@ -308,7 +340,7 @@
 						<input type="checkbox" id="cross-coating" class="main-checkbox" />
 						<label for="cross-coating" class="main-label">
 							クロス(防汚/触媒系)コーティング
-							<span class="toggle-icon"></span>
+							<span class="checkmark"></span>
 						</label>
 						<div class="sub-options">
 							<label class="sub-item">
@@ -360,7 +392,7 @@
 						<input type="checkbox" id="other-coating" class="main-checkbox" />
 						<label for="other-coating" class="main-label">
 							その他コーティング
-							<span class="toggle-icon"></span>
+							<span class="checkmark"></span>
 						</label>
 						<div class="sub-options">
 							<label class="sub-item">
@@ -443,11 +475,10 @@
 								type="checkbox"
 								id="maintenance-preference"
 								class="main-checkbox"
-
 							/>
 							<label for="maintenance-preference" class="main-label">
 								お手入れと性能
-								<span class="toggle-icon"></span>
+								<span class="checkmark"></span>
 							</label>
 							<div class="sub-options">
 								<label class="sub-item">
@@ -485,7 +516,7 @@
 							/>
 							<label for="cost-preference" class="main-label">
 								コスト
-								<span class="toggle-icon"></span>
+								<span class="checkmark"></span>
 							</label>
 							<div class="sub-options">
 								<label class="sub-item">
@@ -527,7 +558,7 @@
 							/>
 							<label for="desired-coating-type" class="main-label">
 								ご希望のコーティング種別
-								<span class="toggle-icon"></span>
+								<span class="checkmark"></span>
 							</label>
 							<div class="sub-options">
 								<label class="sub-item">
@@ -747,10 +778,7 @@
 				<!-- Submit -->
 				<section class="form-section submit-section">
 					<div class="submit-container">
-						<button
-							type="submit"
-							class="submit-button"
-						>
+						<button type="submit" class="submit-button">
 							<span class="submit-text">確認画面へ進む</span>
 							<span class="submit-icon">→</span>
 						</button>

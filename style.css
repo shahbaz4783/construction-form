@@ -301,6 +301,7 @@ input[type='tel']:focus {
 	display: flex;
 	gap: 2rem;
 	margin-bottom: 1rem;
+    margin-top: 0.5rem;
 }
 
 /* Checkbox Styles */
@@ -603,6 +604,8 @@ input[type='tel']:focus {
     align-items: center;
     cursor: pointer;
 }
+
+
 
 .radio-label input[type="radio"] {
     display: none;
@@ -1152,7 +1155,7 @@ input[type='tel']:focus {
 
 .radio-label {
     flex: 1;
-    min-width: 200px;
+    min-width: 20px;
     position: relative;
     display: flex;
     align-items: center;
@@ -1601,3 +1604,91 @@ input[type='tel']:focus {
         .checkbox-group {
             transition: all 0.3s ease;
         }
+
+        .coating-group {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.main-checkbox {
+  display: none;
+}
+
+.main-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.main-label:hover {
+  background-color: #f3f4f6;
+}
+
+.main-label .checkmark {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #22c55e;
+  border-radius: 4px;
+  margin-left: 0.75rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.main-checkbox:checked + .main-label .checkmark {
+  background-color: #22c55e;
+}
+
+.main-checkbox:checked + .main-label .checkmark::after {
+  content: "✓";
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sub-options {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.main-checkbox:checked ~ .sub-options {
+  max-height: 500px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.sub-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+}
+
+.sub-checkbox {
+  display: none;
+}
+
+.sub-item .checkmark {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #22c55e;
+  border-radius: 4px;
+  margin-right: 0.75rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.sub-checkbox:checked + .checkmark {
+  background-color: #22c55e;
+}
